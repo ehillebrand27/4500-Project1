@@ -1,0 +1,7 @@
+hyphenated-
+word
+Not - tied together
+strange -
+thing
+-hello
+word-
