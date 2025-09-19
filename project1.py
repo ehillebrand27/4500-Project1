@@ -14,7 +14,41 @@ CS 4500-001-10567, Fall 2025
 What the program is designed to do:
 File searching program. Gets a valid text file from user and allows user to search for legal
 words in the file, then prints a summary of words searched for
-
+Description:
+# This program prompts the user to enter a valid `.txt` file from the current directory.
+# It reads the file contents and extracts all valid words (alphabetic sequences with optional internal hyphens).
+# The user is then allowed to repeatedly enter "LegalWords" (letters and hyphens only),
+# and the program counts and displays how many times the word occurs in the file.
+# When the user is done, a summary of all searched words and their frequencies is displayed.
+#
+# Central Data Structures:
+# - list_of_words: A list that stores all valid words extracted from the input file, converted to lowercase.
+# - searched_words: A dictionary mapping each LegalWord entered by the user to its count in the file.
+#
+# External Files Used:
+# - A user-provided .txt file containing text to be analyzed. This file must be located in the same directory
+#   as the script, and must have a `.txt` extension (case-insensitive).
+#
+# Outside Resources Used:
+# 1. Stack Overflow – Regex for hyphenated words inside text
+#    - https://stackoverflow.com/questions/61685026/regex-to-match-words-including-hyphenated-ones
+#    - Helped develop the regular expression pattern used to match words with optional internal hyphens.
+#
+# 2. Python Docs – os.path.splitext and os.path.exists
+#    - https://docs.python.org/3/library/os.path.html
+#    - Used to validate file extensions and check for file existence.
+#
+# 3. Python Docs – re.findall
+#    - https://docs.python.org/3/library/re.html#re.findall
+#    - Used to extract all matching word patterns from each line of text.
+#
+# 4. Stack Overflow – Strip newline characters from text lines
+#    - https://stackoverflow.com/questions/275018/how-can-i-remove-a-trailing-newline
+#    - Helped refine line processing to properly handle line endings.
+#
+# 5. Stack Overflow – Detect and handle hyphenated line continuations
+#    - https://stackoverflow.com/questions/1398986/reading-a-text-file-line-by-line-and-concatenating-lines-that-end-with-a-hyphe
+#    - Inspired logic for joining
 '''
 
 import os
